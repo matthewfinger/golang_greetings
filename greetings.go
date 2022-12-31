@@ -1,4 +1,4 @@
-package greetings
+package golang_greetings
 
 import "fmt"
 
