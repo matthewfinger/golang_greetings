@@ -1,6 +1,9 @@
 package golang_greetings
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Return a greeting for a name based on if the entity is liked
 func Greet(name string, liked bool) string {
@@ -12,6 +15,10 @@ func Greet(name string, liked bool) string {
 }
 
 // returns a greeting for the named person
-func Hello(name string) string {
-	return Greet(name, true)
+func Hello(name string) (string, error) {
+	// if the name is invalid (empty) give an error
+	if (name == "") {
+		return "", errors.New("empty name")
+	}
+	return Greet(name, true), nil
 }
