@@ -20,7 +20,7 @@ func GreetPatterns(liked bool) []string {
 	return []string{
 		"Oh great, it's %v",
 		"%v is here, that means the fun just left",
-		"Boo, you stink",
+		"Boo, you stink%.0v",
 	}
 }
 
